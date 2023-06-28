@@ -1,4 +1,25 @@
-# TODO
+# Ideas
+
+## Puzzle List
+
+I don't want the puzzles of an act to be listed like this, because
+that's a spoiler. I need to figure out a way to hide the puzzles.
+
+Currently, I'm thinking:
+
+ - Setup some wordlist of generic stuff + words / phrases
+ - Mark each puzzle with a number of trigger phrases, like
+   "play music", "anthem", "grammophone" for the music puzzle
+   in Matryoshka. 
+ - Present the player with a large cloud of words, with 1-2
+   words per (unfound) puzzle, as well as a bunch of words
+   from the list.
+ - The player looks at this list, and if they
+   recognize a word as something they are currently wondering
+   about, they can click on this. If this matches a puzzle,
+   the puzzle is revealed.
+ - There should also be the usual "spoil me" button.
+# Shortcomings
 
 ## Acts should be a DAG and not just a list
 
