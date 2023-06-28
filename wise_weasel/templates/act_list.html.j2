@@ -3,10 +3,10 @@
 {% block title %} Hints for {{ game }} {% endblock %}
 
 {% block content %}
-{% for act in seen_acts %}
-<div class="act {{ 'current' if loop.last else 'solved' }}">
+{% for act in seen_acts | reverse %}
+<div class="act {{ 'current' if loop.first else 'solved' }}">
     <h1>{{ act.name }}</h1>
-    {% if loop.last %}
+    {% if loop.first %}
     <a href="{{ url_for('list_acts', game=game, lastSolvedAct=act.index) }}">
         I've solved this one
     </a>
