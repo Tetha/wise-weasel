@@ -1,0 +1,21 @@
+# TODO
+
+## Acts should be a DAG and not just a list
+
+Currently I've hacked together that acts are just a list of acts.
+The player marks a "last solved act" and acts before that are
+displayed, and you can click on "I've solved this" to get to
+the next.
+
+This wouldn't work for more complex adventures:
+
+- In Monkey Island 2, getting the pirate certificate unlocks
+  3-4 islands and you can engage these islands in parallel
+
+- In Day of the Tentacle, you eventually unlock the Chron-o-John,
+  and this allows engaging with the past, present and future at
+  the same time.
+
+In these cases, the player should be able to mark the first pirate
+island as "solved", and then all of the islands might pop up
+as different sections.

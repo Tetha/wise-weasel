@@ -1,0 +1,22 @@
+{% extends "layout.html.j2" %}
+
+{% block title %} Hints for {{ game }} {% endblock %}
+
+{% block content %}
+{% for act in seen_acts %}
+<p>
+    <h1>{{ act.name }}</h1>
+    {% if loop.last %}
+    <a href="{{ url_for('list_acts', game=game, lastSolvedAct=act.index) }}">
+        I've solved this one
+    </a>
+    {% endif %}
+</p>
+{% endfor %}
+
+<p>
+    <a href="{{ url_for('list_acts', game=game, lastSolvedAct=max_act_id) }}">
+        Go ahead, spoil me and show me all acts
+    </a>
+</p>
+{% endblock%}
