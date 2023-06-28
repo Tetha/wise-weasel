@@ -4,14 +4,14 @@
 
 {% block content %}
 {% for act in seen_acts %}
-<p>
+<div class="act {{ 'current' if loop.last else 'solved' }}">
     <h1>{{ act.name }}</h1>
     {% if loop.last %}
     <a href="{{ url_for('list_acts', game=game, lastSolvedAct=act.index) }}">
         I've solved this one
     </a>
     {% endif %}
-</p>
+</div>
 {% endfor %}
 
 <p>

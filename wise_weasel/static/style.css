@@ -1,0 +1,20 @@
+:root {
+--ww-black-8: #f1f1f1;
+--ww-black-7: #d3d3d3;
+--ww-black-6: #b5b5b5;
+--ww-black-5: #979797;
+--ww-black-4: #787878;
+--ww-black-3: #5a5a5a;
+--ww-black-2: #3c3c3c;
+--ww-black-1: #1e1e1e;
+}
+
+.act.solved {
+    background-color: var(--ww-black-8);
+    color: var(--ww-black-4);
+}
+
+.act.current {
+    background-color: var(--ww-black-8);
+    color: var(--ww-black-2);
+}

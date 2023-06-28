@@ -19,3 +19,8 @@ This wouldn't work for more complex adventures:
 In these cases, the player should be able to mark the first pirate
 island as "solved", and then all of the islands might pop up
 as different sections.
+
+
+# References
+
+- Colors: https://www.refactoringui.com/previews/building-your-color-palette
