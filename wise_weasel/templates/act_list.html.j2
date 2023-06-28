@@ -6,6 +6,9 @@
 {% for act in seen_acts | reverse %}
 <div class="act {{ 'current' if loop.first else 'solved' }}">
     <h1>{{ act.name }}</h1>
+    <a href="{{ url_for('list_puzzles', game=game, act_name=act.name) }}">
+        I'm stuck here.
+    </a>
     {% if loop.first %}
     <a href="{{ url_for('list_acts', game=game, lastSolvedAct=act.index) }}">
         I've solved this one

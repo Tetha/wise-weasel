@@ -1,0 +1,11 @@
+{% extends "layout.html.j2" %}
+
+{% block title %} Puzzles in act {{ act.name }} for {{ game }} {% endblock %}
+
+{% block content %}
+{% for puzzle in act.puzzles %}
+<div class="puzzle">
+  <h1> {{ puzzle.name }} </h1>
+</div>
+{% endfor %}
+{% endblock %}

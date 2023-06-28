@@ -4,7 +4,7 @@ from flask import render_template
 from wise_weasel.model import get_data_loader
 from . import app
 
-@app.route("/games")
+@app.route("/v1/games")
 def list_games():
     loader = get_data_loader()
 

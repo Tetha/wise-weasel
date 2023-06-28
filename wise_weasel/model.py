@@ -1,14 +1,18 @@
 from typing import Protocol
 from flask import g
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class Game(BaseModel):
     name: str
 
+class Puzzle(BaseModel):
+    name: str
+
 class Act(BaseModel):
     name: str
     index: int
+    puzzles: list[Puzzle] = Field(default_factory=list)
 
 class HelpForGame(BaseModel):
     acts: list[Act]
@@ -26,7 +30,11 @@ class DummyLoader:
         self.games = {
             "Irony Curtain: From Matryoshka with Love": HelpForGame(
                 acts = [
-                    Act(name="Proloque", index=0),
+                    Act(name="Proloque", index=0, puzzles=[
+                        Puzzle(name="Getting onto the stage"),
+                        Puzzle(name="Playing the anthem"),
+                        Puzzle(name="Showing the slides"),
+                    ]),
                     Act(name="The Call", index=10),
                     Act(name="Matryoshka", index=20),
                     Act(name="The secret meeting", index=30),

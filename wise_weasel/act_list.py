@@ -4,7 +4,7 @@ from flask import render_template, request
 from wise_weasel.model import get_data_loader
 from . import app
 
-@app.route("/hints/<game>/acts")
+@app.route("/v1/hints/<game>/acts")
 def list_acts(game):
     loader = get_data_loader()
     help = loader.load_help_for_game(game)

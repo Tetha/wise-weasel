@@ -10,3 +10,4 @@ def before_request():
 
 import wise_weasel.act_list
 import wise_weasel.game_list
+import wise_weasel.puzzle_list
