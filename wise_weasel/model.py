@@ -27,6 +27,12 @@ def get_data_loader() -> Loader:
 
 class DummyLoader:
     def __init__(self):
+        self.game_list = [
+            Game(name="The Day of the Tentacle"),
+            Game(name="Irony Curtain: From Matryoshka with Love"),
+            Game(name="Technobabylon"),
+        ]
+
         self.games = {
             "Irony Curtain: From Matryoshka with Love": HelpForGame(
                 acts = [
@@ -40,6 +46,20 @@ class DummyLoader:
                     Act(name="The secret meeting", index=30),
                     Act(name="Vlad", index=40)
                 ]
+            ),
+            "Technobabylon": HelpForGame(
+                acts = [
+                    Act(name="Chapter 1: Prisoner of Consciousness", index=0),
+                    Act(name="Chapter 10: Suicide City", index=10),
+                    Act(name="Chapter 11: Fission", index=11),
+                    Act(name="Chapter 100: Meeting of Minds", index=100),
+                    Act(name="Chapter 101: Germination", index=101),
+                    Act(name="Chapter 110: Crisis of Consciousness", index=110),
+                    Act(name="Chapter 111: Jahiliyyah", index=111),
+                    Act(name="Chapter 1000: Flesh Drive", index=1000),
+                    Act(name="Chapter 1001: Ripper", index=1001),
+                    Act(name="Chapter 1010: Runtime", index=1010),
+                ]
             )
         }
 
@@ -47,8 +67,4 @@ class DummyLoader:
         return self.games.get(game, None)
 
     def load_game_list(self) -> list[Game]:
-        return [
-            Game(name="The Day of the Tentacle"),
-            Game(name="Irony Curtain: From Matryoshka with Love"),
-            Game(name="Technobabylon"),
-        ]
+        return self.game_list
